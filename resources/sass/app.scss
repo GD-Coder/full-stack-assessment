@@ -1,0 +1,73 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.dsd-header {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: "Quicksand";
+    letter-spacing: 1px;
+    background-color: #212121;
+    color: white;
+}
+
+.dsd-card {
+    padding: 10px;
+    width: 100%;
+}
+
+.v-messages__message {
+    line-height: 2.1 !important;
+}
+
+.dsd-flex {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.message-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.dsd-span {
+    font-family: "Quicksand" !important;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.main-card {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.dsd-footer {
+    font-family: 'Quicksand';
+    text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.success-msg-large {
+    font-family: "Quicksand";
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+.success-msg-small {
+    font-family: "Quicksand";
+    letter-spacing: 2px;
+    font-size: 25px;
+}
