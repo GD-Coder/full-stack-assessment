@@ -1909,8 +1909,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     saveMessage: function saveMessage() {
       if (this.$refs.messageForm.validate()) {
-        this.$root.messageStore.dispatch("saveMessage", this.message);
         document.getElementById("send-button").disabled = true;
+        this.$root.messageStore.dispatch("saveMessage", this.message);
       }
     },
     clearMessage: function clearMessage() {

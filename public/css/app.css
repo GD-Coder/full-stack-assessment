@@ -10718,7 +10718,6 @@ a.text-dark:focus {
 .success-msg-large {
   font-family: "Quicksand";
   letter-spacing: 2px;
-  font-size: 50px;
 }
 
 .success-msg-small {
@@ -10747,5 +10746,42 @@ a.text-dark:focus {
   color: white;
   overflow: hidden;
   padding-top: 100px;
+}
+
+text {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 8s forwards;
+}
+
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+text {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 8s forwards;
+  animation: draw 8s forwards;
+}
+
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.success-animation {
+  position: relative;
+  bottom: 25px;
+  left: 20px;
 }
 

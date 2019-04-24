@@ -131,8 +131,8 @@ export default {
   methods: {
     saveMessage() {
       if (this.$refs.messageForm.validate()) {
-        this.$root.messageStore.dispatch("saveMessage", this.message);
         document.getElementById("send-button").disabled = true
+        this.$root.messageStore.dispatch("saveMessage", this.message)
       }
     },
     clearMessage() {
