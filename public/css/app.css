@@ -10781,7 +10781,38 @@ text {
 
 .success-animation {
   position: relative;
-  bottom: 25px;
+  bottom: 90px;
   left: 20px;
+}
+
+.trails {
+  stroke-dasharray: 5;
+  stroke-dashoffset: 50;
+  -webkit-animation: fly 2s infinite;
+          animation: fly 2s infinite;
+}
+
+@-webkit-keyframes fly {
+  from {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 50;
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes fly {
+  from {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 50;
+    stroke-opacity: 0;
+  }
 }
 

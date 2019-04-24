@@ -140,6 +140,63 @@ text {
 
 .success-animation {
     position: relative;
-    bottom: 25px;
+    bottom: 90px;
     left: 20px;
 }
+
+.trails {
+    stroke-dasharray: 5;
+    stroke-dashoffset: 50;
+    animation: fly 2s infinite;
+}
+
+@-webkit-keyframes fly {
+    from {
+      stroke-dashoffset: 00;
+      stroke-opacity: 1;
+    }
+    to {
+        stroke-dashoffset: 50;
+        stroke-opacity: 0; 
+    }
+  }
+  @-moz-keyframes fly {
+    from {
+      stroke-dashoffset: 00;
+      stroke-opacity: 1;
+    }
+    to {
+        stroke-dashoffset: 50;
+        stroke-opacity: 0; 
+    }
+  }
+  @-o-keyframes fly {
+    from {
+      stroke-dashoffset: 00;
+      stroke-opacity: 1;
+    }
+    to {
+        stroke-dashoffset: 50;
+        stroke-opacity: 0; 
+    }
+  }
+  @-ms-keyframes fly {
+    from {
+      stroke-dashoffset: 00;
+      stroke-opacity: 1;
+    }
+    to {
+        stroke-dashoffset: 50;
+        stroke-opacity: 0; 
+    }
+  }
+  @keyframes fly {
+    from {
+      stroke-dashoffset: 00;
+      stroke-opacity: 1;
+    }
+    to {
+        stroke-dashoffset: 50;
+        stroke-opacity: 0; 
+    }
+  }
