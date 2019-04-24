@@ -4,7 +4,7 @@
 <v-card class="card" raised dark>
     <center>
         <v-sheet
-        style="text-align: center; padding-left: 5%; padding-right: 5%; color: white; overflow: hidden; padding-top: 100px;"
+        class="success-sheet"
         elevation="15"
         color="success"
         height="400px"

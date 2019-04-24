@@ -71,9 +71,11 @@
     </v-toolbar>
     <v-content>
     <main class="py-4">
-		 <v-card class="card main-card" raised dark>
+        <center>
+		 <v-card class="card main-card" style="max-width: 600px;"raised dark>
          @yield('content')
-		</v-card>
+        </v-card>
+    </center>
     </main>
     </v-content>
     <v-footer app fixed>

@@ -71,3 +71,25 @@
     letter-spacing: 2px;
     font-size: 25px;
 }
+
+.error-header {
+    font-family: "Quicksand";
+    letter-spacing: 1px;
+}
+
+.error-list {
+    background-color: rgba(255, 0, 0, 0.47);
+    list-style: none;
+    font-size: 15px;
+    font-family: "Quicksand";
+    letter-spacing: 1px;
+}
+
+.success-sheet {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    overflow: hidden;
+    padding-top: 100px;
+}

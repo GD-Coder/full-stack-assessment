@@ -2,6 +2,6 @@
 
 @section('content')
 <v-card class="card" raised dark>
-<message-form></message-form>
+<message-form ref="messageForm"></message-form>
 </v-card>
 @endsection

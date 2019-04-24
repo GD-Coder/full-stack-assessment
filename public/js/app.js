@@ -1864,10 +1864,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       valid: true,
+      errors: false,
       message: {},
       nameRules: [function (v) {
         return !!v || "Name is required";
@@ -48923,6 +48938,8 @@ var render = function() {
                               label: "Name*",
                               hint: "What is your name?",
                               rules: _vm.nameRules,
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -48950,6 +48967,8 @@ var render = function() {
                               label: "Email*",
                               hint: "What email address can we reach you at?",
                               rules: _vm.emailRules,
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -48984,6 +49003,8 @@ var render = function() {
                               label: "Company*",
                               hint: "What company do you work for?",
                               rules: _vm.companyRules,
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -49011,6 +49032,9 @@ var render = function() {
                               label: "Phone Number*",
                               hint: "What number we can reach you at?",
                               rules: _vm.phoneRules,
+                              mask: "phone",
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -49045,6 +49069,8 @@ var render = function() {
                               label: "Subject*",
                               hint: "What is this message regarding?",
                               rules: _vm.subjectRules,
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -49073,6 +49099,8 @@ var render = function() {
                               label: "Message*",
                               hint: "What would you like to say?",
                               rules: _vm.contentRules,
+                              box: "",
+                              color: "success",
                               required: ""
                             },
                             model: {
@@ -49093,7 +49121,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { color: "error", disabled: !_vm.valid },
+                      attrs: { color: "success", disabled: !_vm.valid },
                       on: { click: _vm.saveMessage }
                     },
                     [_vm._v("Send")]
@@ -49102,7 +49130,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { color: "success" },
+                      attrs: { color: "error" },
                       on: { click: _vm.clearMessage }
                     },
                     [_vm._v("Cancel")]
@@ -49111,7 +49139,29 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c("div", [_c("ul", { attrs: { id: "errors" } })])
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors,
+                      expression: "errors"
+                    }
+                  ]
+                },
+                [
+                  _c("h3", { staticClass: "error-header" }, [
+                    _vm._v("Hmmm... Something's not right...")
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", {
+                    staticClass: "error-list",
+                    attrs: { id: "errors" }
+                  })
+                ]
+              )
             ],
             1
           )
@@ -88435,11 +88485,15 @@ var messageStore = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
       axios.post('create/message', {
         message: state.message
       }).then(function (response) {
+        app.$refs.messageForm.errors = false;
         setTimeout(function () {
           window.location.assign(location + "success");
         }, 4000);
       })["catch"](function (error) {
-        app.notify('Message not sent... Please ensure all inputs are filled out correctly.', 'error');
+        app.$refs.messageForm.errors = true;
+        app.objectToArray(error.response.data.errors).forEach(function (error) {
+          document.getElementById("errors").insertAdjacentHTML("beforeend", "<li>" + error[1][0].replace('message.', '') + "</li>");
+        });
       });
     }
   },
@@ -88483,6 +88537,11 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
       this.snackbarIcon = icon;
       this.$refs.snackBar.display = true;
+    },
+    objectToArray: function objectToArray(object) {
+      return Object.keys(object).map(function (key) {
+        return [Number(key), object[key]];
+      });
     }
   }
 });

@@ -24,6 +24,8 @@
                 label="Name*"
                 hint="What is your name?"
                 :rules="nameRules"
+                box
+                color="success"
                 required
               ></v-text-field>
             </v-flex>
@@ -35,6 +37,8 @@
                 label="Email*"
                 hint="What email address can we reach you at?"
                 :rules="emailRules"
+                box
+                color="success"
                 required
               ></v-text-field>
             </v-flex>
@@ -48,6 +52,8 @@
                 label="Company*"
                 hint="What company do you work for?"
                 :rules="companyRules"
+                box
+                color="success"
                 required
               ></v-text-field>
             </v-flex>
@@ -59,6 +65,9 @@
                 label="Phone Number*"
                 hint="What number we can reach you at?"
                 :rules="phoneRules"
+                mask="phone"
+                box
+                color="success"
                 required
               ></v-text-field>
             </v-flex>
@@ -72,6 +81,8 @@
                 label="Subject*"
                 hint="What is this message regarding?"
                 :rules="subjectRules"
+                box
+                color="success"
                 required
               ></v-text-field>
             </v-flex>
@@ -84,16 +95,19 @@
                 label="Message*"
                 hint="What would you like to say?"
                 :rules="contentRules"
+                box
+                color="success"
                 required
               ></v-textarea>
             </v-flex>
           </v-layout>
 
-          <v-btn color="error" :disabled="!valid" @click="saveMessage">Send</v-btn>
-          <v-btn color="success" @click="clearMessage">Cancel</v-btn>
+          <v-btn color="success" :disabled="!valid" @click="saveMessage">Send</v-btn>
+          <v-btn color="error" @click="clearMessage">Cancel</v-btn>
         </v-form>
-        <div>
-          <ul id="errors"></ul>
+        <div v-show="errors">
+            <h3 class="error-header">Hmmm... Something's not right...</h3>
+          <ul class="error-list" id="errors"></ul>
         </div>
       </v-card>
     </v-layout>
@@ -103,6 +117,7 @@
 export default {
   data: () => ({
     valid: true,
+    errors: false,
     message: {},
     nameRules: [v => !!v || "Name is required"],
     emailRules: [v => !!v || "Email address is required"],

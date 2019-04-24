@@ -29,11 +29,17 @@ const messageStore = new Vuex.Store({
             axios.post('create/message', {
                 message: state.message
             }).then(response => {
-                    setTimeout(() => {
-                        window.location.assign(location + "success")
-                    }, 4000);
+                app.$refs.messageForm.errors = false
+                setTimeout(() => {
+                    window.location.assign(location + "success")
+                }, 4000);
             }).catch(error => {
-                app.notify('Message not sent... Please ensure all inputs are filled out correctly.', 'error')
+                app.$refs.messageForm.errors = true
+                app.objectToArray(error.response.data.errors).forEach(error => {
+                    document
+                    .getElementById("errors")
+                    .insertAdjacentHTML("beforeend", "<li>"+ error[1][0].replace('message.','') + "</li>")
+                })
             })
         }
     },
@@ -73,5 +79,8 @@ const app = new Vue({
             this.snackbarIcon = icon
             this.$refs.snackBar.display = true
         },
+        objectToArray(object) {
+            return Object.keys(object).map((key) => [Number(key), object[key]])
+        }
     }
 })
