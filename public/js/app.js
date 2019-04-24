@@ -88488,7 +88488,7 @@ var messageStore = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
         app.$refs.messageForm.errors = false;
         setTimeout(function () {
           window.location.assign(location + "success");
-        }, 4000);
+        }, 100);
       })["catch"](function (error) {
         app.$refs.messageForm.errors = true;
         app.objectToArray(error.response.data.errors).forEach(function (error) {

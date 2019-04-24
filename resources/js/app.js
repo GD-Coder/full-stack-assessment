@@ -32,7 +32,7 @@ const messageStore = new Vuex.Store({
                 app.$refs.messageForm.errors = false
                 setTimeout(() => {
                     window.location.assign(location + "success")
-                }, 4000);
+                }, 100);
             }).catch(error => {
                 app.$refs.messageForm.errors = true
                 app.objectToArray(error.response.data.errors).forEach(error => {
