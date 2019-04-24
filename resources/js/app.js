@@ -40,6 +40,7 @@ const messageStore = new Vuex.Store({
                     .getElementById("errors")
                     .insertAdjacentHTML("beforeend", "<li>"+ error[1][0].replace('message.','') + "</li>")
                 })
+                document.getElementById("send-button").disabled = false
             })
         }
     },

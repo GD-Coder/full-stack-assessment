@@ -1910,6 +1910,7 @@ __webpack_require__.r(__webpack_exports__);
     saveMessage: function saveMessage() {
       if (this.$refs.messageForm.validate()) {
         this.$root.messageStore.dispatch("saveMessage", this.message);
+        document.getElementById("send-button").disabled = true;
       }
     },
     clearMessage: function clearMessage() {
@@ -49121,7 +49122,11 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
-                      attrs: { color: "success", disabled: !_vm.valid },
+                      attrs: {
+                        id: "send-button",
+                        color: "success",
+                        disabled: !_vm.valid
+                      },
                       on: { click: _vm.saveMessage }
                     },
                     [_vm._v("Send")]
@@ -88494,6 +88499,7 @@ var messageStore = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
         app.objectToArray(error.response.data.errors).forEach(function (error) {
           document.getElementById("errors").insertAdjacentHTML("beforeend", "<li>" + error[1][0].replace('message.', '') + "</li>");
         });
+        document.getElementById("send-button").disabled = false;
       });
     }
   },

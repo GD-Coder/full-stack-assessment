@@ -102,7 +102,7 @@
             </v-flex>
           </v-layout>
 
-          <v-btn color="success" :disabled="!valid" @click="saveMessage">Send</v-btn>
+          <v-btn id="send-button" color="success" :disabled="!valid" @click="saveMessage">Send</v-btn>
           <v-btn color="error" @click="clearMessage">Cancel</v-btn>
         </v-form>
         <div v-show="errors">
@@ -132,6 +132,7 @@ export default {
     saveMessage() {
       if (this.$refs.messageForm.validate()) {
         this.$root.messageStore.dispatch("saveMessage", this.message);
+        document.getElementById("send-button").disabled = true
       }
     },
     clearMessage() {
