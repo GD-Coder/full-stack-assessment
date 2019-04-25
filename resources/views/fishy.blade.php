@@ -60,5 +60,6 @@
         
     </v-sheet>
     </center>
+    <v-btn flat outline @click="toStart" color="error" >Start Over</v-btn>
 </v-card>
 @endsection

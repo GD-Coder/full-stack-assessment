@@ -85,6 +85,9 @@ const app = new Vue({
         },
         seeFish() {
             window.location.assign(location + "fishy")
+        },
+        toStart() {
+            window.location.assign(location)
         }
     }
 })
