@@ -10753,6 +10753,7 @@ text {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   -webkit-animation: draw 8s forwards;
+  animation: draw 8s forwards;
 }
 
 @-webkit-keyframes draw {
@@ -10789,20 +10790,29 @@ text {
 .trails {
   stroke-dasharray: 5;
   stroke-dashoffset: 50;
+  animation: fly 2s infinite;
   -webkit-animation: fly 2s infinite;
-          animation: fly 2s infinite;
+  -moz-animation: fly 2s infinite;
+  -o-animation: fly 2s infinite;
+  -ms-animation: fly 2s infinite;
 }
 
 .fish {
   stroke-dasharray: 5;
   stroke-dashoffset: 60;
+  animation: fishy 2s infinite;
   -webkit-animation: fishy 2s infinite;
-          animation: fishy 2s infinite;
+  -moz-animation: fishy 2s infinite;
+  -o-animation: fishy 2s infinite;
+  -ms-animation: fishy 2s infinite;
 }
 
 .bubble {
+  animation: bubbles 2s infinite;
   -webkit-animation: bubbles 2s infinite;
-          animation: bubbles 2s infinite;
+  -moz-animation: bubbles 2s infinite;
+  -o-animation: bubbles 2s infinite;
+  -ms-animation: bubbles 2s infinite;
 }
 
 @-webkit-keyframes fly {
