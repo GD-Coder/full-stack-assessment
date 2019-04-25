@@ -88548,6 +88548,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       return Object.keys(object).map(function (key) {
         return [Number(key), object[key]];
       });
+    },
+    seeFish: function seeFish() {
+      window.location.assign(location + "fishy");
     }
   }
 });

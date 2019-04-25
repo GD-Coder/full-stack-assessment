@@ -18,3 +18,6 @@ Route::post('/create/message', 'MessageController@createMessage');
 Route::get('/success', function () {
     return view('success')->with(['title' => 'Assessment | Success']);
 });
+Route::get('/fishy', function () {
+    return view('fishy')->with(['title' => 'Assessment | Fishy Fun']);
+});

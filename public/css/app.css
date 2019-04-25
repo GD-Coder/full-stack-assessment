@@ -10793,6 +10793,18 @@ text {
           animation: fly 2s infinite;
 }
 
+.fish {
+  stroke-dasharray: 5;
+  stroke-dashoffset: 60;
+  -webkit-animation: fishy 2s infinite;
+          animation: fishy 2s infinite;
+}
+
+.bubble {
+  -webkit-animation: bubbles 2s infinite;
+          animation: bubbles 2s infinite;
+}
+
 @-webkit-keyframes fly {
   from {
     stroke-dashoffset: 50;
@@ -10814,6 +10826,50 @@ text {
   to {
     stroke-dashoffset: 10;
     stroke-opacity: 0;
+  }
+}
+
+@-webkit-keyframes fishy {
+  from {
+    stroke-dashoffset: 60;
+    stroke-opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 10;
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes fishy {
+  from {
+    stroke-dashoffset: 60;
+    stroke-opacity: 1;
+  }
+
+  to {
+    stroke-dashoffset: 10;
+    stroke-opacity: 0;
+  }
+}
+
+@-webkit-keyframes bubbles {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bubbles {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 

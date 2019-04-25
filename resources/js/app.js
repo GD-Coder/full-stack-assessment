@@ -82,6 +82,9 @@ const app = new Vue({
         },
         objectToArray(object) {
             return Object.keys(object).map((key) => [Number(key), object[key]])
+        },
+        seeFish() {
+            window.location.assign(location + "fishy")
         }
     }
 })

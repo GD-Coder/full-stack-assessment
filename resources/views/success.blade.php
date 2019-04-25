@@ -40,7 +40,9 @@
             <path id="flight-path" d="M114.211 110.784c.661.925-64.702 53.608-58.993 76.125 2.658 10.486 15.915 18.363 32.908 24.284" fill="none" stroke="none" stroke-width=".265"/>
         </svg>
 
+        
     </v-sheet>
     </center>
+    <v-btn flat outline @click="seeFish" color="#00adef" >See My Fish!</v-btn>    
 </v-card>
 @endsection
