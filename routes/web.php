@@ -11,10 +11,10 @@
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->with(['title' => 'Assessment | Contact Us']);
 });
 
 Route::post('/create/message', 'MessageController@createMessage');
 Route::get('/success', function () {
-    return view('success');
+    return view('success')->with(['title' => 'Assessment | Success']);
 });
