@@ -8,6 +8,7 @@
 	<title>LF Assessment</title>
 	<!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+        <link rel="icon" href="{{url('/images/lf-logo.png')}}">
   <style>
 	@font-face {
   font-family: 'Material Icons';
