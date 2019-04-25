@@ -49138,7 +49138,7 @@ var render = function() {
                       attrs: { color: "error" },
                       on: { click: _vm.clearMessage }
                     },
-                    [_vm._v("Cancel")]
+                    [_vm._v("Clear")]
                   )
                 ],
                 1
