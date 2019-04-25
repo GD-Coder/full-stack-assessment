@@ -102,8 +102,8 @@
             </v-flex>
           </v-layout>
 
-          <v-btn id="send-button" color="success" :disabled="!valid" @click="saveMessage">Send</v-btn>
-          <v-btn color="error" @click="clearMessage">Clear</v-btn>
+          <v-btn flat outline id="send-button" color="success" :disabled="!valid" @click="saveMessage">Send</v-btn>
+          <v-btn flat outline color="error" @click="clearMessage">Clear</v-btn>
         </v-form>
         <div v-show="errors">
             <h3 class="error-header">Hmmm... Something's not right...</h3>
