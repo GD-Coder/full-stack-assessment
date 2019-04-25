@@ -73,7 +73,7 @@
     <v-content>
     <main class="py-4">
         <center>
-		 <v-card class="card main-card" style="max-width: 600px;"raised dark>
+		 <v-card class="card main-card" max-width="600" raised dark>
          @yield('content')
         </v-card>
     </center>
