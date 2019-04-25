@@ -33,13 +33,13 @@
                 <path class="trails" d="M95.235 128.443l-6.53 6.081" stroke-width=".242"/>
                 <path class="trails" d="M96.213 132.385l-3.159 3.337M90.765 127.558l-3.367 3.024" stroke-width=".261"/>
                 <path d="M106.164 118.065l-10.51 9.837 2.309 8.516" stroke-width=".492"/> 
-                <animateMotion dur="1.6s" keyPoints="1;0" keyTimes="0;1" calcMode="linear" repeatCount="0" fill="freeze">
+                <animateMotion dur="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear" repeatCount="0" fill="freeze">
                     <mpath xlink:href="#flight-path"></mpath>
                 </animateMotion>
             </g>
             <path id="flight-path" d="M114.211 110.784c.661.925-64.702 53.608-58.993 76.125 2.658 10.486 15.915 18.363 32.908 24.284" fill="none" stroke="none" stroke-width=".265"/>
         </svg>
-        
+
     </v-sheet>
     </center>
 </v-card>
