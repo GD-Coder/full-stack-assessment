@@ -10,7 +10,7 @@
         height="400px"
         width="100%">
 
-        <svg width="210mm" height="297mm" viewBox="0 0 210 297" transform="translate(-100, -500)">
+        <svg width="210mm" height="297mm" viewBox="0 0 210 297" transform="translate(-100, -450)">
             <defs>
                 <linearGradient id="a">
                 <stop offset="0" stop-opacity="0"/>
@@ -29,10 +29,10 @@
             </g>
             <ellipse cx="98.087" cy="125.677" rx="13.589" ry="13.462" fill="#fff" stroke="#fff" stroke-width=".38" stroke-linecap="round"/>
             <g transform="translate(-115, -110)" fill="#fff" stroke="#4caf50">
-                <path d="M95.654 127.902l-8.009-2.137 18.519-7.7-8.201 18.353" stroke-width=".459"/>
-                <path class="trails" d="M95.235 128.443l-6.53 6.081" stroke-width=".242"/>
-                <path class="trails" d="M96.213 132.385l-3.159 3.337M90.765 127.558l-3.367 3.024" stroke-width=".261"/>
-                <path d="M106.164 118.065l-10.51 9.837 2.309 8.516" stroke-width=".492"/> 
+                <path d="M95.654 127.902l-8.009-2.137 18.519-7.7-8.201 18.353" stroke-width=".7"/>
+                <path class="trails" d="M95.235 128.443l-6.53 6.081" stroke-width=".3"/>
+                <path class="trails" d="M96.213 132.385l-3.159 3.337M90.765 127.558l-3.367 3.024" stroke-width=".3"/>
+                <path d="M106.164 118.065l-10.51 9.837 2.309 8.516" stroke-width=".7"/> 
                 <animateMotion dur="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear" repeatCount="0" fill="freeze">
                     <mpath xlink:href="#flight-path"></mpath>
                 </animateMotion>
