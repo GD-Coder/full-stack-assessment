@@ -10,7 +10,7 @@
         height="400px"
         width="100%">
 
-        <svg width="210mm" height="297mm" viewBox="0 0 210 297" transform="translate(-100, -450)">
+        <svg viewBox="80 80 30 120" >
             <defs>
                 <linearGradient id="a">
                 <stop offset="0" stop-opacity="0"/>
