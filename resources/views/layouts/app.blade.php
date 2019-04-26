@@ -4,11 +4,12 @@
     <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <title>{{ $title }}</title>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
-    <link rel="icon" href="{{url('/images/lf-logo.png')}}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="{{url('/images/lf-logo.png')}}"/>
     <style>
         @font-face {
             font-family: 'Material Icons';
@@ -50,7 +51,7 @@
 <body>
 <div id="app">
     <v-app id="inspire" dark>
-            <snack-bar ref="snackBar" :text="snackbarText" :color="snackbarColor" :icon="snackbarIcon"></snack-bar>
+            {{--  <snack-bar ref="snackBar" :text="snackbarText" :color="snackbarColor" :icon="snackbarIcon"></snack-bar>  --}}
         <v-navigation-drawer
         clipped
         fixed
@@ -66,6 +67,7 @@
                 </v-list-tile-title>
             </v-list-tile-content>
             </v-list-tile>
+        </v-list>
         </v-navigation-drawer>
         <v-toolbar app fixed clipped-left>
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -80,7 +82,7 @@
         </main>
         </v-content>
         <v-footer app fixed>
-        <span class="dsd-footer">Dreamscape Technologies &copy; 2019 <div></span>
+        <span class="dsd-footer">Dreamscape Technologies &copy; 2019</span>
         </v-footer>
     </v-app>
 </div>
