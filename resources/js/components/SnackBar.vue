@@ -1,5 +1,4 @@
 <!--
- *  TCMS Project.
  *  SnackBar.vue
  *  Created: Sep 10, 2018
  *  Author: Gerald Downey
